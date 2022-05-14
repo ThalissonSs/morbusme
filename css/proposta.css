@@ -10,14 +10,6 @@
   list-style: none;
 }
 
-body, html {
-  display: flex;
-  flex-direction: column;
-  background-color: #6894A6;
-  min-height: 100vh;
-  min-width: 100vh;
-}
-
 .nao-selecionavel, #nao-selecionavel {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -27,15 +19,48 @@ body, html {
   user-select: none;
 }
 
+html, body {
+  background-color: #6894A6;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
-  padding: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-bottom: 10px;
+  
   max-width: 100%;
+  height: 96px;
+  padding: 0 15px;
+
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#header-titulo {
+  letter-spacing: 2.5px;
+  font-weight: 900;
+  color: #23556E;
+}
+
+#header-titulo-nome {
+  color: #7CCCCB;
+  font-weight: 900;
+}
+
+#hambuguer {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+
+#hambuguer:hover {
+  transform: scale(1.2);
+  transition: .1s;
+}
+
+#hambuguer:active {
+  transform: scale(1);
+  transition: .1s;
 }
 
 #nav {
@@ -43,9 +68,9 @@ header {
   justify-content: center;
   position: absolute;
   background-color: white;
-  top: 95px;
+  top: 96px;
   right: 0;
-  height: calc(100% - 95px);
+  height: calc(100vh - 96px);
   width: 0px;
   transition: .6s;
   z-index: 1000;
@@ -56,14 +81,15 @@ header {
 #nav.active {
   visibility: visible;
   overflow-x: auto;
-  width: 25%;
+  width: 50vh;
 }
 
-.tabs {
-  font-family: 'Poppins';
-  font-weight: 400;
-  font-size: 20px;
-  color: #23556E;
+#menu li {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  text-align: center;
+  margin: 2rem 0;
 }
 
 #pag {
@@ -75,79 +101,119 @@ header {
   cursor: pointer;
 }
 
-#menu li {
-  display: flex;
-  justify-content: center;
-  white-space: nowrap;
-  text-align: center;
-  margin: 2rem 0;
-}
-
-#hambuguer {
-  width: 64px;
-  height: 64px;
-  cursor: pointer;
-}
-
-#hambuguer:hover {
-  transform: scale(1.1);
-  transition-duration: 50ms;
-}
-
-#hambuguer:active {
-  transform: scale(0.9);
-  transition-duration: 50ms;
-}
-
-#header-titulo {
-  letter-spacing: 2.5px;
-  font-weight: 900;
+.tabs {
+  font-family: 'Poppins', Helvetica;
+  font-weight: 400;
+  font-size: 20px;
   color: #23556E;
 }
 
-#header-titulo-nome {
-  color: #7CCCCB;
-}
-
-#janela-flutuante {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
 main {
-  display: flex;
-  justify-content: center;
+  display: block;
+
   background-color: #49798C;
-  min-height: 70vh;
-  width: 60rem;
-  border-radius: 12px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+  max-width: calc(100% - (1.5rem*2));
+  height: calc(100vh - (3rem + 96px));
+  margin: 1.5rem;
+}
+
+article {
+  padding: 2rem;
+  text-align: justify;
 }
 
 p {
   color: white;
-  padding-top: 10px;
   font-size: 23px;
   letter-spacing: 1.5px;
-  text-align: justify;
-  margin: 0px 60px;
 }
 
-#frase-inicial {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 60px;
-}
-
-#main-article-topicos {
+#texto-inicial {
+  max-width: 900px;
   margin: 0 auto;
+  text-align: center;
+  text-align-last: center;
+}
+
+#informacoes {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+#subtitulo {
   color: #F29422;
   background-color: white;
-  padding: 5px;
-  width: fit-content;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 6px;
+
+  white-space: nowrap;
+}
+
+#informacoes-texto {
+  margin: .5rem;
+}
+
+@media screen and (min-width: 1025px) {
+  main {
+    max-width: 1024px;
+    margin: 1.5rem auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  p {
+    font-size: 19px;
+  }
+  
+  #subtitulo {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    max-width: calc(100% - 2rem);
+    height: calc(100vh - (50px + 2rem));
+    margin: 1rem;
+  }
+
+  article {
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  #subtitulo {
+    font-size: 16px
+  }
+
+  header {
+    height: 50px;
+  }
+
+  #nav {
+    top: 50px;
+    height: calc(100% - 50px);
+  }
+
+  .tabs {
+    font-size: 15px;
+  }
+
+  #hambuguer {
+    width: 32px;
+    height: 32px;
+  }
+
+  #header-titulo {
+    font-size: 24px;
+  }
 }
