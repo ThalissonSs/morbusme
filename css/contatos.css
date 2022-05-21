@@ -117,7 +117,6 @@ header {
   position: absolute;
   width: 100%;
   z-index: -1;
-  top: 122px;
   left: 0;
 }
 
@@ -133,23 +132,7 @@ main {
 }
 
 article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  height: calc(100vh - (2rem + 90px));
-}
-
-p {
-  max-width: 900px;
-  text-align: center;
-
-  font-family: Helvetica;
-  font-size: 22px;
-
-  color: #365B6D;
-  letter-spacing: .5px;
+  padding: 2rem;
 }
 
 #informacao-titulo {
@@ -159,7 +142,26 @@ p {
   color: #365B6D;
   border-radius: 10px;
 
-  margin: 0 auto 1rem auto;
   width: fit-content;
   padding: 6px;
+}
+
+.contatos {
+  display: flex;
+  align-items: center;
+
+  margin-top: 1rem;
+  width: fit-content;
+  gap: 1rem;
+
+  color: #365B6D;
+  font-family: 'Poppins';
+  font-weight: 500;
+  letter-spacing: .5px;
+
+}
+
+.icon-image {
+  width: 40px;
+  height: 40px;
 }

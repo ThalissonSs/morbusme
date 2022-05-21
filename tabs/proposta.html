@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="PT-BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Morbusme - Proposta</title>
   <link rel="stylesheet" href="../css/proposta.css">
-  <script src="../script/app.js" defer></script>
+  <script src="../js/app.js" defer></script>
 </head>
 <body>
   <header>
-    <h1 class="nao-selecionavel" id="header-titulo">morbus<span id="header-titulo-nome">me</span></h1>
-    <img class="nao-selecionavel" id="hambuguer" src="../images/hambuguer.png" alt="#">
-    <nav id="nav">
-      <ul id="menu">
-        <li class="nao-selecionavel"><a class="tabs" href="../index.html">Menu inicial</a></li>
-        <li class="nao-selecionavel"><a class="tabs" id="pag" href="#">Proposta</a></li>
-        <li class="nao-selecionavel"><a class="tabs" href="#">Sobre nós</a></li>
-        <li class="nao-selecionavel"><a class="tabs" href="./contatos.html">Contatos</a></li>
+    <h1 id="header-titulo">Morbus<span id="header-titulo-decoracao">me</span></h1>
+    <button id="hambuguer" class="nao-selecionavel">
+      <img src="../images/hambuguer.png" alt="Imagem do Hambuguer" id="hambuguer-image">
+    </button>
+    <nav id="header-nav">
+      <ul id="nav-menu">
+        <li><a class="tabs" href="../index.html">Menu inicial</a></li>
+        <li><a class="tabs" id="pag-selecionada" href="#">Proposta</a></li>
+        <li><a class="tabs" href="#">Sobre nós</a></li>
+        <li><a class="tabs" href="./contatos.html">Contatos</a></li>
       </ul>
     </nav>
   </header>
-  <section id="janela-flutuante">
-    <main>
+  <main>
       <article>
-        <p id="frase-inicial">Diagnósticos provisórios e rápidos de doenças<br>
-        a um clique de distância.</p>
-        <h2 id="main-article-topicos"># Informações importantes</h2>
-        <p>Não somos especialistas ou profissionais. Por
-        favor, de modo algum leve isso como uma
-        verdade absoluta! Após o resultado procurar
-        uma agência de saúde mais próxima de você.</p>
+        <p id="frase-intodrucao">Diagnóstico provisórios e rápidos de doenças a um clique de distância.</p>
+        <section id="informacao">
+          <h2 id="informacao-titulo"># Informações importantes</h2>
+          <p id="informacao-conteudo">Não somos especialistas ou profissionais. Por favor, de modo algum leve isso como uma verdade absoluta! Após o resultado procurar agência de saúde mais próxima de você.</p>
+        </section>
       </article>
-    </main>
-  </section>
+  </main>
 </body>
 </html>
