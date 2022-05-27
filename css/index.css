@@ -143,8 +143,8 @@ main {
   max-width: 900px;
   text-align: center;
 
-  font-family: Helvetica;
-  font-size: 28px;
+  font-family: 'Poppins';
+  font-size: 20px;
 
   color: #365B6D;
   letter-spacing: .5px;
@@ -156,6 +156,7 @@ main {
   cursor: pointer;
 
   font-size: 30px;
+  font-family: 'Poppins';
   padding: 20px;
 
   border: none;

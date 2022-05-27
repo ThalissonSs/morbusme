@@ -117,8 +117,16 @@ header {
   position: absolute;
   width: 100%;
   z-index: -1;
-  top: 122px;
   left: 0;
+}
+
+#section-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: calc(100vh - 90px);
 }
 
 main {
@@ -126,8 +134,8 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
-  height: calc(100vh - (2rem + 90px));
-  max-width: calc(100% - 2rem);
+  height: 377px;
+  max-width: calc(1024px - 2rem);
 
   margin: 1rem;
 }
@@ -138,15 +146,15 @@ article {
   justify-content: space-around;
   align-items: center;
 
-  height: calc(100vh - (2rem + 90px));
+  height: 377px;
 }
 
 p {
   max-width: 900px;
   text-align: center;
 
-  font-family: Helvetica;
-  font-size: 22px;
+  font-family: 'Poppins';
+  font-size: 18px;
 
   color: #365B6D;
   letter-spacing: .5px;
